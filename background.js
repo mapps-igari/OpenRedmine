@@ -11,7 +11,6 @@ chrome.contextMenus.create({
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log(sender);
     var selText = request.selText;
 
     redmineNo = extractRedmineTicketNo(selText);
