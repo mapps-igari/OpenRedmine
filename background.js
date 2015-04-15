@@ -22,7 +22,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 function extractRedmineTicketNo(text) {
     var matchResult = text.match(/(_|#|t|\/)\d+/g);
-    return (matchResult!=null) ? matchResult[0].match(/\d+/)[0] : "";
+    if(matchResult!=null) {
+        return matchResult[0].match(/\d+/)[0];
+    }
+    matchResult = text.match(/^\d+$/);
+    if(matchResult!=null) {
+        return matchResult[0];
+    }
+    return "";
 }
 
 function openRedmine(redmineNo) {
