@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "redmineチケット表示",
+    "version": "1.0",
+    "description": "選択中のチケット番号のチケットをredmineで表示します",
+    "permissions": ["contextMenus", "tabs", "http://*/*", "https://*/*"],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["jquery.js","content_script.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["jquery.js","background.js"]
+    }
+}
