@@ -8,3 +8,4 @@ Open redmine chrome extension
 
 # 使い方
 Redmineチケット番号を含むリンクを右クリックすると、コンテキストメニューに[#xxxxをRedmineで表示]メニューアイテムが表示されます。
+ただし、ときどき動作しなくなります。。。
