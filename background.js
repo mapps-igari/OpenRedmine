@@ -15,7 +15,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     var selText = request.selText;
 
     redmineNo = extractRedmineTicketNo(selText);
-    console.log("redmineNo="+redmineNo);
     var caption = (redmineNo!="") ? "'#"+redmineNo+"'をRedmineで表示" : "Redmineチケット番号が見つかりません";
 
     chrome.contextMenus.update(myMenuId, {title: caption});
